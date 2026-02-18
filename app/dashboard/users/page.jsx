@@ -1,3 +1,4 @@
+import { deleteUser } from "@/app/lib/actions";
 import { fetchUsers } from "@/app/lib/data";
 import { Pagination } from "@/app/ui/dashboard/pagination/pagination";
 import { Search } from "@/app/ui/dashboard/search/search";
@@ -7,8 +8,9 @@ import Link from "next/link";
 
 export default async function UsersPage({ searchParams }) {
   const q = searchParams.q || "";
-  const users = await fetchUsers(q);
-  
+  const page = searchParams.page || 1;
+  const { totalUsers, users } = await fetchUsers(q, page);
+
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.top}`}>
@@ -64,7 +66,10 @@ export default async function UsersPage({ searchParams }) {
                   <Link href={`/dashboard/users/${user._id}`}>
                     <button className={`${styles.button} ${styles.view}`}>View</button>
                   </Link>
-                  <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+                  <form action={deleteUser}>
+                    <input type="hidden" name="id" value={user.id} />
+                    <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+                  </form>
                 </div>
               </td>
             </tr>
@@ -72,7 +77,7 @@ export default async function UsersPage({ searchParams }) {
         </tbody>
       </table>
 
-      <Pagination />
+      <Pagination totalCount={totalUsers} />
     </div>
   );
 }

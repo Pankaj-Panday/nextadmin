@@ -1,7 +1,7 @@
-import styles from "@/app/ui/login/login.module.css";
+import styles from "../ui/login/login.module.css";
 import { LoginForm } from "../ui/login/loginForm/loginForm";
 
-export default function LoginPage() {
+export default async function LoginPage() {
   return (
     <div className={styles.container}>
       <LoginForm />

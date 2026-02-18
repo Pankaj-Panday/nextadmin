@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema(
     phone: { type: String },
     address: { type: String },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 const productSchema = new mongoose.Schema(
@@ -24,8 +24,10 @@ const productSchema = new mongoose.Schema(
     color: { type: String },
     size: { type: String },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
-export const User = mongoose.models.User || mongoose.model("User", userSchema);
-export const Product = mongoose.models.Product || mongoose.model("Product", productSchema);
+export const User = mongoose.models?.User || mongoose.model("User", userSchema);
+
+export const Product =
+  mongoose.models?.Product || mongoose.model("Product", productSchema);

@@ -14,6 +14,9 @@ export const Search = ({ placeholder }) => {
   const handleSearch = useDebouncedCallback((e) => {
     const value = e.target.value;
     const params = new URLSearchParams(searchParams.toString());
+
+    params.set("page", "1"); // Reset to first page on new search
+
     if (value) {
       value.length > 2 && params.set("q", value);
     } else {
