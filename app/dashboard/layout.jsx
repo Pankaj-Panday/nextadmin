@@ -5,17 +5,15 @@ import { Footer } from "../ui/dashboard/footer/footer";
 
 export default async function Layout({ children }) {
   return (
-    // <SessionProvider>
-      <div className={styles.container}>
-        <div className={styles.menu}>
-          <Sidebar />
-        </div>
-        <div className={styles.content}>
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+    <div className={styles.container}>
+      <div className={styles.menu}>
+        <Sidebar />
       </div>
-    // </SessionProvider>
+      <div className={styles.content}>
+        <Navbar />
+        {children}
+        <Footer />
+      </div>
+    </div>
   );
 }

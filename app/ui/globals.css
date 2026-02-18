@@ -1,8 +1,19 @@
 :root {
-  --bg: #151c2c;
-  --bgSoft: #182237;
-  --text: white;
-  --textSoft: #b7bac1;
+  --bg: #0f1117; /* main background */
+  --bgSoft: #151a24; /* cards / panels */
+  --bgElevated: #1b2230; /* hover / inputs */
+
+  --text: #f5f7ff;
+  --textSoft: #9da7b8;
+
+  --accent: #7c5cff; /* primary brand color */
+  --accentSoft: #9f86ff;
+
+  --success: #24c08d;
+  --danger: #ff5c7a;
+  --warning: #f5b941;
+
+  --border: #2a3244;
 }
 
 * {

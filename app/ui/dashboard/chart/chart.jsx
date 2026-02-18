@@ -59,10 +59,21 @@ export const Chart = () => {
         >
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip contentStyle={{ background: "#151c2c", border: "none" }} />
+          <Tooltip contentStyle={{ background: "#151a24", border: "none" }} />
           <Legend />
-          <Line type="monotone" dataKey="visit" stroke="#8884d8" strokeDasharray="5 5" />
-          <Line type="monotone" dataKey="click" stroke="#82ca9d" strokeDasharray="3 4 5 2" />
+          <Line
+            type="monotone"
+            dataKey="visit"
+            stroke="#7c5cff"
+            strokeDasharray="5 5"
+          />
+
+          <Line
+            type="monotone"
+            dataKey="click"
+            stroke="#24c08d"
+            strokeDasharray="3 4 5 2"
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>

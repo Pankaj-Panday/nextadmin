@@ -3,7 +3,7 @@
 }
 
 .item {
-  background: linear-gradient(to top, #182237, #253352);
+  background: linear-gradient(145deg, #151a24, #1b2230);
   padding: 20px 24px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -33,7 +33,6 @@
   font-weight: bold;
 }
 
-
 .subtitle {
   color: var(--textSoft);
   font-weight: 500;
@@ -51,7 +50,7 @@
   align-items: center;
   gap: 10px;
   width: max-content;
-  background-color: #5d57c9;
+  background-color: var(--accent);
   color: white;
   border: none;
   border-radius: 5px;

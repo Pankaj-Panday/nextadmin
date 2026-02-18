@@ -3,6 +3,7 @@
 import { authenticate } from "@/app/lib/actions";
 import styles from "./loginForm.module.css";
 import { useFormState } from "react-dom";
+import SubmitButton from "./submitBtn";
 
 export const LoginForm = () => {
   const [error, formAction] = useFormState(authenticate, null);
@@ -24,7 +25,7 @@ export const LoginForm = () => {
       />
 
       <p style={{ fontSize: 12, opacity: 0.7 }}>Demo: admin / password</p>
-      <button>Login</button>
+      <SubmitButton />
 
       {error && <p style={{ color: "red" }}>{error}</p>}
     </form>
