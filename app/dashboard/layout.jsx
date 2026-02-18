@@ -2,7 +2,6 @@ import { Navbar } from "../ui/dashboard/navbar/navbar";
 import { Sidebar } from "../ui/dashboard/sidebar/sidebar";
 import styles from "../ui/dashboard/dashboard.module.css";
 import { Footer } from "../ui/dashboard/footer/footer";
-import { SessionProvider } from "next-auth/react";
 
 export default async function Layout({ children }) {
   return (
